@@ -14,7 +14,6 @@ console.log(calculateTip(pretipBill));
 // Creating function to get total bill
 function getBillTotal(price){
     billTotal = (price + calculateTip(price)).toFixed(2);
-    billTotal = billTotal;
     return "Your total bill is: $" + billTotal + ". $" + tip.toFixed(2) + " was added for tip. To your earlier bill of $" + pretipBill + ".";
 };
 
