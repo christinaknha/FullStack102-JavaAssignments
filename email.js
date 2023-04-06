@@ -67,5 +67,5 @@ console.log(appData.outbox)
 
 
 // Adds draft email to drafts mailbox
-appData.drafts[1]= {to: "Amy", status:"draft", subject: "New Foster Pickup"}
+appData.drafts.push({to: "Amy", status:"draft", subject: "New Foster Pickup"})
 console.log(appData.drafts)
