@@ -46,5 +46,8 @@ console.log(peter.addToFamily(Sean))
 console.log(peter.family)
 
 console.log(peter instanceof Person)
+console.log(Kevin instanceof Person)
+console.log(Sioban instanceof Person)
+console.log(Sean instanceof Person)
 
 
