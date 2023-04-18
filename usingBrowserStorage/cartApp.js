@@ -33,7 +33,7 @@ function toRemove(itemID){
     // removes item with itemID
     for (let i = 0; i < currentCart.length; i++){
         if (currentCart[i].id == itemID){
-            localStorage.removeItem(currentCart[i])
+            currentCart.splice(i,1)
         }else{
             return
         }
