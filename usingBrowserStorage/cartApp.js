@@ -24,7 +24,7 @@ function addItem(item){
     localStorage.setItem("cart", JSON.stringify(currentCart))
 }
 
-function toRemove(itemID){
+function removeItem(itemID){
     // how to test if this works
 
     // retrieves cart from local storage
