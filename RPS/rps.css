@@ -1,0 +1,51 @@
+ .instructions{
+    background-color: #9ac2c5;
+    margin: 0;
+ }
+
+ h1 {
+    text-align: center;
+ }
+
+ html, body{
+    height: 100%;
+}
+
+ .section{
+    background-image: linear-gradient(to right, #C2C6A7, #C2C6A7 50%, #ECCE8E 50%, #ECCE8E);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.box{
+    display:flex;
+    justify-content: center;
+}
+
+.player1, .computer{
+    display: flex;
+    flex-direction: column; 
+    width: 50%;
+    padding: 10% 0;
+ }
+
+.moves{
+    display: flex;
+    justify-content: space-evenly
+
+}
+
+.computer{
+    display:flex;
+    flex-direction: column;
+    width: 50%
+}
+.playButton{
+    background-color: #9ac2c5;
+    display: flex;
+    justify-content: center
+}
+
+.hidden {
+    display: none;
+  }
