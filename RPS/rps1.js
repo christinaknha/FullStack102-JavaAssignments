@@ -63,7 +63,7 @@ function playRound(){
     let p2Move = JSON.parse(localStorage.getItem("computerHand"))
 
 //     // sets condition for a tie
-    if (p1Move == p2Move) {
+    if (p1Move == "rock" && p2Move == "rock" || p1Move == "scissors" && p2Move == "scissors" || p1Move == "paper" && p2Move =="paper" ) {
         window.alert("Player 1 played " + JSON.parse(localStorage.getItem("player1Hand")) + ". " +
         "Computer played " + JSON.parse(localStorage.getItem("computerHand")) + ". " +
         "It is a tie." + "Player 1 has " + p1Wins + " points. Player 2 has " + p2Wins + " points.");
