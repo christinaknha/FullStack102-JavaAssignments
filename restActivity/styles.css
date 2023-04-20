@@ -1,0 +1,24 @@
+body{
+    background-color: lightcyan;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    font-size: larger;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+li{
+    padding: 1%;
+}
