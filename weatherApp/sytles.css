@@ -1,0 +1,74 @@
+body{ 
+    background: rgb(205,255,216);
+    background: linear-gradient(90deg, rgba(205,255,216,1) 0%, rgba(148,185,255,1) 100%);
+}
+
+.logo{
+    display: flex;
+    position: relative;
+    align-content: center;
+}
+
+.image{
+    max-width: 50%;
+    width :75%;
+    height: auto;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+}
+
+.motto{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+
+}
+
+#citySearch{
+    display:flex;
+    align-items: center;
+    display: inline;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#zipCodeEntry{
+    display:flex;
+    
+    align-items: center;
+    display: inline;
+}
+
+.search{
+    height: 1em;
+}
+
+.dataDisplay{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+hr{
+    width: 75%;
+}
+
+.highLow{
+    display:flex;
+    justify-content: center;
+}

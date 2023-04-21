@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel = "stylesheet" href = "sytles.css">
+</head>
+<body>
+    <header>
+        <div class = "logo">
+            <img src = "potentialLogo2.png" alt="cloud" class="image" >
+            <h1 class="name">Meteoradict</h1>
+            <p class="motto">Weather You Like It Or Not</p>
+            <form id="citySearch">
+                <input type="text" id="zipCodeEntry" class="search" placeholder = "Enter zip code here">
+                <button type="submit" id="cityZipSearch"><img src="search.png" class = "search"></button>
+            </form>
+        </div>
+        
+    </header>
+    <hr>
+    <div>
+        <!-- display for information -->
+        <div class="dataDisplay">
+            <!-- display city from zip code.-->
+            <h1 id = "currentCity"></h1>
+            <p class = "today"> Today's Forecast</p>    
+            <!-- display current date -->
+            <p id = "currentDate"></p>
+            
+
+            <!-- display current temperature F -->
+            <p id = "currentTemp"></p>
+
+            <!-- display current conditions-->
+            <p id = "currentCondition"></p>
+
+            <!-- display Temp Hi/Low -->
+            <div class="highLow">
+                <p id = "High"></p>
+                <p id = "Low"></p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- display weeklong weather -->
+    <footer>
+
+    </footer>
+    <script src = "script.js"></script>
+    <script src ="script2.js"></script>
+</body>
+</html>
