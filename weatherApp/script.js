@@ -1,19 +1,24 @@
-
-let zipCode = document.getElementById("zipCodeEntry").value
-// let zipCode = 28270
 let apiKey = `ea316c4223dde35438426450a5abcc54`;
-let apiLink = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},US&appid=${apiKey}&units=imperial`
+function APILink(){
+    let zipCode = document.getElementById("zipCodeEntry").value
+    return `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},US&appid=${apiKey}&units=imperial`
+}
 
+function APILink2(){
+    // let zipCode = document.getElementById("zipCodeEntry").value
+    let zipCode = 28012
+    return `https://api.openweathermap.org/data/2.5/forecast?zip=${zipCode},US&appid=${apiKey}&units=imperial`
+}
 // CALL WEATHER API
 function weatherInfo() {
-    fetch(apiLink)
+    fetch(APILink())
     .then((response) => response.json())
     .then((json) => console.log(json))
 }
 
 // FIND CURRENT CITY
 function currentCity() {
-    fetch (apiLink)
+    fetch (APILink())
     .then((response) => response.json())
     .then((json) => displayCityName(json.name))
 }
@@ -45,7 +50,7 @@ function displayDateData(dateInfo) {
 
 // FIND CURRENT TEMP
 function currentTemp() {
-    fetch (apiLink)
+    fetch (APILink())
     .then((response) => response.json())
     .then((json) => displayCurrentTemp(json.main.temp))
 }
@@ -58,9 +63,9 @@ function displayCurrentTemp(jsonData) {
 
 //  FIND CURRENT CONDITIONS
 function currentConditions(){
-    fetch(apiLink)
+    fetch(APILink())
     .then((response) => response.json())
-    .then((json) => displayCurrentCond(json.weather[0].main))
+    .then((json) => displayCurrentCond(json.weather[0].description))
 }
 // FUNCTION TO DISPLAY DATA
 function displayCurrentCond(jsonData) {
@@ -71,13 +76,13 @@ function displayCurrentCond(jsonData) {
 
 // find Temp Hi/Low
 function findHigh(){
-    fetch(apiLink)
+    fetch(APILink())
     .then((response) => response.json())
     .then((json) => displayH(json.main.temp_max))
 }
 
 function findLow() {
-    fetch(apiLink)
+    fetch(APILink())
     .then((response) => response.json())
     .then((json) => displayL(json.main.temp_min))
 }
@@ -96,17 +101,48 @@ function displayL(jsonData) {
     let data =jsonData
     dataToDisplay.innerHTML = "L: " + data + " F";
 }
+/* //Five Day Forecast
+let weatherInfo2 =
+    fetch(APILink2())
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+
+let fiveDayArray = [];
+function findDD(jsonData){
+    for (i = 0; i <jsonData.list.length; i += 8)
+    fiveDayArray.push(jsonData.list[i])
+    // console.log(fiveDayArray)
+    return(fiveDayArray)
+}
+
+console.log(fiveDayArray)
+console.log(fiveDayArray)
+
+function findFiveHigh(data){
+    for (i = 0; i <fiveDayArray.length; i ++){
+        console.log(fiveDayArray[i].main)
+    }
+
+}
+
+let dailyInfo = 
+fetch(APILink2())
+.then((response) => response.json())
+.then((json) => findDD(json))
+ .then((fiveDayArray) => )*/
+
 
 
 // addEvent Listener for cityZipSearch
 let searchButton = document.getElementById("cityZipSearch");
 searchButton.addEventListener("click", () => {
-    currentCity();
+    currentCity()
     displayDateData(theDate);
     currentTemp();
     currentConditions();
     findHigh();
     findLow();
+    document.getElementById("zipCodeEntry").value = ""
 
 })
 

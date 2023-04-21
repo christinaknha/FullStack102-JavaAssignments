@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
-    <link rel = "stylesheet" href = "sytles.css">
+    <link rel = "stylesheet" href = "styles.css">
 </head>
 <body>
     <header>
         <div class = "logo">
-            <img src = "potentialLogo2.png" alt="cloud" class="image" >
+            <img src = "potentialLogo2.png" alt="cloud" class="cloud" >
             <h1 class="name">Meteoradict</h1>
             <p class="motto">Weather You Like It Or Not</p>
-            <form id="citySearch">
+            <!-- <form id="citySearch" onsubmit = event.preventDefault> -->
+            <div id="citySearch">
                 <input type="text" id="zipCodeEntry" class="search" placeholder = "Enter zip code here">
-                <button type="submit" id="cityZipSearch"><img src="search.png" class = "search"></button>
-            </form>
+                <button id="cityZipSearch"><img src="search.png" class = "search"></button>
+            </div>
+            <!-- </form> -->
         </div>
         
     </header>
@@ -25,7 +27,7 @@
         <!-- display for information -->
         <div class="dataDisplay">
             <!-- display city from zip code.-->
-            <h1 id = "currentCity"></h1>
+            <p id = "currentCity"></p>
             <p class = "today"> Today's Forecast</p>    
             <!-- display current date -->
             <p id = "currentDate"></p>
@@ -47,9 +49,14 @@
     <hr>
     <!-- display weeklong weather -->
     <footer>
+        <div id="contact-me" class="footer">
+            <div class="copyright">
+                <p>© 2023 HaNhi All rights reserved</p>
+            </div>
 
+        </div>
+        
     </footer>
     <script src = "script.js"></script>
-    <script src ="script2.js"></script>
 </body>
 </html>
