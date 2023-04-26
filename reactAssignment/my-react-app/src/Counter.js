@@ -5,19 +5,19 @@ import React from 'react'
 const Counter = () => {
     const [count, setCount] = useState(0);
 
-    const increment = () =>{
+    const Increment = () =>{
         setCount(count + 1);
     }
 
-    const decrement = () => {
+    const Decrement = () => {
         setCount (count - 1);
     }
 
     return(
         <div>
             <h1>{count}</h1>
-            <button onClick = {increment}>Increment by 1</button>
-            <button onClick = {decrement}>Decrement by 1</button>
+            <button onClick = {Increment}>Increment by 1</button>
+            <button onClick = {Decrement}>Decrement by 1</button>
         </div>
     )
 }
